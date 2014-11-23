@@ -1,0 +1,23 @@
+{
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "~4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "AVW\\IntegerValidator\\": "src",
+            "Tests\\AVW\\IntegerValidator\\": "tests",
+            "AVW\\StringValidator\\": "src",
+            "Tests\\AVW\\StringValidator\\": "tests",
+            "AVW\\BooleanValidator\\": "src",
+            "Tests\\AVW\\BooleanValidator\\": "tests",
+            "AVW\\ArrayValidator\\": "src",
+            "Tests\\AVW\\ArrayValidator\\": "tests",
+            "AVW\\DateTimeValidator\\": "src",
+            "Tests\\AVW\\DateTimeValidator\\": "tests"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
