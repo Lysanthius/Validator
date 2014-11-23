@@ -2,6 +2,7 @@
 
 namespace AVW\Validator;
 
-class DateTimeValidator {
+class DateTimeValidator
+{
 
 } 

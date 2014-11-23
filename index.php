@@ -50,3 +50,22 @@ echo \AVW\Validator\StringValidator::noWhiteSpaceStartEnd("Hey lo");
 echo \AVW\Validator\StringValidator::noWhiteSpaceStartEnd(" Hey lo ");
 echo '<br>';
 
+echo 'Array:<br>';
+$array = ['couleur' => 'vert', 'fruit' => 'pomme', 'plante' => 'cactus'];
+echo \AVW\Validator\ArrayValidator::isEmpty(array());
+echo \AVW\Validator\ArrayValidator::isEmpty($array);
+echo '<br>';
+echo \AVW\Validator\ArrayValidator::keyExists($array, 'fruit');
+echo \AVW\Validator\ArrayValidator::keyExists($array, 'lol');
+echo '<br>';
+echo \AVW\Validator\ArrayValidator::valueExists($array, 'vert');
+echo \AVW\Validator\ArrayValidator::valueExists($array, 'vet');
+echo '<br>';
+echo \AVW\Validator\ArrayValidator::numberElementsBetween($array, 1, 5);
+echo \AVW\Validator\ArrayValidator::numberElementsBetween($array, 6, 8);
+echo '<br>';
+echo \AVW\Validator\ArrayValidator::compare($array, 3, \AVW\Validator\ArrayValidator::COMPARE_EQUAL);
+echo \AVW\Validator\ArrayValidator::compare($array, 3, \AVW\Validator\ArrayValidator::COMPARE_HIGHER);
+
+
+

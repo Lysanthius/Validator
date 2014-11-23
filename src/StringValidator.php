@@ -12,12 +12,14 @@ class StringValidator
      * @param string $string
      * @param int $length
      *
-     * @return bool|\Exception
+     * @throws \Exception
+     *
+     * @return bool
      */
     public static function hasLength($string, $length)
     {
         if(!is_string($string) || !is_int($length))
-            return new \Exception('The first parameter has to be a string, the second an int.');
+            throw new \Exception('The first parameter has to be a string, the second an int.');
 
         if(mb_strlen($string) == $length)
             return true;
@@ -29,12 +31,14 @@ class StringValidator
      * @param string $string
      * @param int $length
      *
-     * @return bool|\Exception
+     * @throws \Exception
+     *
+     * @return bool
      */
     public static function lengthHigher($string, $length)
     {
         if(!is_string($string) || !is_int($length))
-            return new \Exception('The first parameter has to be a string, the second an int.');
+            throw new \Exception('The first parameter has to be a string, the second an int.');
 
         if(mb_strlen($string) > $length)
             return true;
@@ -46,12 +50,14 @@ class StringValidator
      * @param string $string
      * @param int $length
      *
-     * @return bool|\Exception
+     * @throws \Exception
+     *
+     * @return bool
      */
     public static function lengthLower($string, $length)
     {
         if(!is_string($string) || !is_int($length))
-            return new \Exception('The first parameter has to be a string, the second an int.');
+            throw new \Exception('The first parameter has to be a string, the second an int.');
 
         if(mb_strlen($string) < $length)
             return true;
@@ -64,12 +70,17 @@ class StringValidator
      * @param int $min
      * @param int $max
      *
-     * @return bool|\Exception
+     * @throws \Exception
+     *
+     * @return bool
      */
     public static function lengthBetween($string, $min, $max)
     {
         if(!is_string($string) || !is_int($min) || !is_int($max))
-            return new \Exception('The first parameter has to be a string, the second and the third int.');
+            throw new \Exception('The first parameter has to be a string, the second and the third int.');
+
+        if($min >= $max)
+            throw new \Exception('You have to enter the minimum and then the maximum.');
 
         $stringLength = mb_strlen($string);
 
@@ -82,12 +93,14 @@ class StringValidator
     /**
      * @param string $string
      *
-     * @return bool|\Exception
+     * @throws \Exception
+     *
+     * @return bool
      */
     public static function noWhiteSpace($string)
     {
         if(!is_string($string))
-            return new \Exception('The parameter has to be a string.');
+            throw new \Exception('The parameter has to be a string.');
 
         if (!preg_match('/\s/',$string))
             return true;
@@ -98,12 +111,14 @@ class StringValidator
     /**
      * @param string $string
      *
-     * @return bool|\Exception
+     * @throws \Exception
+     *
+     * @return bool
      */
     public static function noWhiteSpaceStartEnd($string)
     {
         if(!is_string($string))
-            return new \Exception('The parameter has to be a string.');
+            throw new \Exception('The parameter has to be a string.');
 
         if(trim($string) == $string)
             return true;
