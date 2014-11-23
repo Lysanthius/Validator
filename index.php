@@ -66,6 +66,19 @@ echo \AVW\Validator\ArrayValidator::numberElementsBetween($array, 6, 8);
 echo '<br>';
 echo \AVW\Validator\ArrayValidator::compare($array, 3, \AVW\Validator\ArrayValidator::COMPARE_EQUAL);
 echo \AVW\Validator\ArrayValidator::compare($array, 3, \AVW\Validator\ArrayValidator::COMPARE_HIGHER);
+echo '<br>';
 
-
-
+echo 'Datetime:<br>';
+$major = new DateTime('1990-02-02');
+$date = new DateTime();
+echo \AVW\Validator\DateTimeValidator::isDay($date, '23');
+echo \AVW\Validator\DateTimeValidator::isDay($date, '28');
+echo '<br>';
+echo \AVW\Validator\DateTimeValidator::isMajor($major);
+echo \AVW\Validator\DateTimeValidator::isMajor($date);
+echo '<br>';
+echo \AVW\Validator\DateTimeValidator::isMonth($date, '11');
+echo \AVW\Validator\DateTimeValidator::isMonth($date, '5');
+echo'<br>';
+echo \AVW\Validator\DateTimeValidator::isYear($date, '2014');
+echo \AVW\Validator\DateTimeValidator::isYear($date, '2000');

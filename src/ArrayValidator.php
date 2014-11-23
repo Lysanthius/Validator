@@ -15,7 +15,7 @@ class ArrayValidator
     const COMPARE_LOWER_OR_EQUAL    = '<=';
 
     /**
-     * @param $array
+     * @param array $array
      *
      * @return bool
      *
@@ -33,8 +33,8 @@ class ArrayValidator
     }
 
     /**
-     * @param $array
-     * @param $int
+     * @param array $array
+     * @param int $int
      * @param $comparator
      *
      * @return bool
@@ -81,9 +81,9 @@ class ArrayValidator
     }
 
     /**
-     * @param $array
-     * @param $min
-     * @param $max
+     * @param array $array
+     * @param int $min
+     * @param int $max
      *
      * @return bool
      *
@@ -106,8 +106,8 @@ class ArrayValidator
     }
 
     /**
-     * @param $array
-     * @param $key
+     * @param array $array
+     * @param string $key
      *
      * @return bool
      *
@@ -125,8 +125,8 @@ class ArrayValidator
     }
 
     /**
-     * @param $array
-     * @param $value
+     * @param array $array
+     * @param string $value
      *
      * @return bool
      *
