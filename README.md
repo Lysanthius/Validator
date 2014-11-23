@@ -2,7 +2,6 @@
 
 This library validates your data (int, bool, array, string, DateTime).
     
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Lysanthius/A3_PSR/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Lysanthius/A3_PSR/?branch=master)
 
 ## Integer
 

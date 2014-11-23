@@ -9,8 +9,8 @@ namespace AVW\Validator;
 class IntegerValidator
 {
     /**
-     * @param $a
-     * @param $b
+     * @param int $a
+     * @param int $b
      *
      * @return bool
      *
@@ -28,8 +28,8 @@ class IntegerValidator
     }
 
     /**
-     * @param $a
-     * @param $b
+     * @param int $a
+     * @param int $b
      *
      * @return bool
      *
@@ -47,8 +47,8 @@ class IntegerValidator
     }
 
     /**
-     * @param $a
-     * @param $b
+     * @param int $a
+     * @param int $b
      *
      * @return bool
      *
@@ -66,9 +66,9 @@ class IntegerValidator
     }
 
     /**
-     * @param $a
-     * @param $b
-     * @param $c
+     * @param int $a
+     * @param int $b
+     * @param int $c
      *
      * @return bool
      *
@@ -86,7 +86,7 @@ class IntegerValidator
     }
 
     /**
-     * @param $a
+     * @param int $a
      *
      * @return bool
      *
@@ -104,7 +104,7 @@ class IntegerValidator
     }
 
     /**
-     * @param $a
+     * @param int $a
      *
      * @return bool
      *

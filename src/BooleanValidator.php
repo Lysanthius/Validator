@@ -9,7 +9,7 @@ namespace AVW\Validator;
 class BooleanValidator
 {
     /**
-     * @param $bool
+     * @param boolean $bool
      *
      * @return bool|\Exception
      */
@@ -25,7 +25,7 @@ class BooleanValidator
     }
 
     /**
-     * @param $bool
+     * @param boolean $bool
      *
      * @return bool|\Exception
      */

@@ -5,16 +5,8 @@
     },
     "autoload": {
         "psr-4": {
-            "AVW\\IntegerValidator\\": "src",
-            "Tests\\AVW\\IntegerValidator\\": "tests",
-            "AVW\\StringValidator\\": "src",
-            "Tests\\AVW\\StringValidator\\": "tests",
-            "AVW\\BooleanValidator\\": "src",
-            "Tests\\AVW\\BooleanValidator\\": "tests",
-            "AVW\\ArrayValidator\\": "src",
-            "Tests\\AVW\\ArrayValidator\\": "tests",
-            "AVW\\DateTimeValidator\\": "src",
-            "Tests\\AVW\\DateTimeValidator\\": "tests"
+            "AVW\\Validator\\": "src",
+            "Tests\\AVW\\Validator\\": "tests"
         }
     },
     "config": {
