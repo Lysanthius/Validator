@@ -2,8 +2,18 @@
 
 namespace AVW\Validator;
 
+/**
+ * Class StringValidator
+ * @package AVW\Validator
+ */
 class StringValidator
 {
+    /**
+     * @param string $string
+     * @param int $length
+     *
+     * @return bool|\Exception
+     */
     public static function hasLength($string, $length)
     {
         if(!is_string($string) || !is_int($length))
@@ -15,6 +25,12 @@ class StringValidator
             return false;
     }
 
+    /**
+     * @param string $string
+     * @param int $length
+     *
+     * @return bool|\Exception
+     */
     public static function lengthHigher($string, $length)
     {
         if(!is_string($string) || !is_int($length))
@@ -26,6 +42,12 @@ class StringValidator
             return false;
     }
 
+    /**
+     * @param string $string
+     * @param int $length
+     *
+     * @return bool|\Exception
+     */
     public static function lengthLower($string, $length)
     {
         if(!is_string($string) || !is_int($length))
@@ -37,6 +59,13 @@ class StringValidator
             return false;
     }
 
+    /**
+     * @param string $string
+     * @param int $min
+     * @param int $max
+     *
+     * @return bool|\Exception
+     */
     public static function lengthBetween($string, $min, $max)
     {
         if(!is_string($string) || !is_int($min) || !is_int($max))
@@ -50,6 +79,11 @@ class StringValidator
             return false;
     }
 
+    /**
+     * @param string $string
+     *
+     * @return bool|\Exception
+     */
     public static function noWhiteSpace($string)
     {
         if(!is_string($string))
@@ -61,6 +95,11 @@ class StringValidator
             return false;
     }
 
+    /**
+     * @param string $string
+     *
+     * @return bool|\Exception
+     */
     public static function noWhiteSpaceStartEnd($string)
     {
         if(!is_string($string))
