@@ -28,3 +28,25 @@ echo \AVW\Validator\BooleanValidator::isFalse(true);
 echo '<br>';
 echo \AVW\Validator\BooleanValidator::isTrue(true);
 echo \AVW\Validator\BooleanValidator::isTrue(false);
+echo '<br>';
+
+echo 'String:<br>';
+echo \AVW\Validator\StringValidator::hasLength("Hello you", 9);
+echo \AVW\Validator\StringValidator::hasLength("Hello you", 10);
+echo '<br>';
+echo \AVW\Validator\StringValidator::lengthBetween("Hello you", 2, 18);
+echo \AVW\Validator\StringValidator::lengthBetween("Hello you", 2, 8);
+echo '<br>';
+echo \AVW\Validator\StringValidator::lengthHigher("Hello you", 5);
+echo \AVW\Validator\StringValidator::lengthHigher("Hello you", 15);
+echo '<br>';
+echo \AVW\Validator\StringValidator::lengthLower("Hello you", 15);
+echo \AVW\Validator\StringValidator::lengthLower("Hello you", 2);
+echo '<br>';
+echo \AVW\Validator\StringValidator::noWhiteSpace("Heysldslds");
+echo \AVW\Validator\StringValidator::noWhiteSpace("Heys ldd slds");
+echo '<br>';
+echo \AVW\Validator\StringValidator::noWhiteSpaceStartEnd("Hey lo");
+echo \AVW\Validator\StringValidator::noWhiteSpaceStartEnd(" Hey lo ");
+echo '<br>';
+
