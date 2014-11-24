@@ -36,7 +36,7 @@ class BooleanValidator
     public static function isFalse($bool)
     {
         if (!is_bool($bool))
-            throw new \Exception("The parameter have to be a boolean.");
+            throw new \Exception("The parameter is supposed to be a boolean.");
 
         if(!$bool)
             return true;

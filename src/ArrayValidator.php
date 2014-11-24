@@ -60,23 +60,18 @@ class ArrayValidator
         switch ($comparator) {
             case self::COMPARE_EQUAL:
                 return $arrayLength == $int;
-                break;
 
             case self::COMPARE_HIGHER:
                 return $arrayLength > $int;
-                break;
 
             case self::COMPARE_HIGHER_OR_EQUAL:
                 return $arrayLength >= $int;
-                break;
 
             case self::COMPARE_LOWER:
                 return $arrayLength < $int;
-                break;
 
             case self::COMPARE_LOWER_OR_EQUAL:
                 return $arrayLength <= $int;
-                break;
         }
     }
 
@@ -92,7 +87,7 @@ class ArrayValidator
     public static function numberElementsBetween($array, $min, $max)
     {
         if(!is_array($array) || !is_int($min) || !is_int($max))
-            throw new \Exception("The first parameter has to be an array, the two other int.");
+            throw new \Exception("The first parameter has to be an array, the two others int.");
 
         if($min >= $max)
             throw new \Exception('You have to enter the minimum and then the maximum.');
