@@ -67,19 +67,22 @@ class IntegerValidator
 
     /**
      * @param int $a
-     * @param int $b
-     * @param int $c
+     * @param int $min
+     * @param int $max
      *
      * @return bool
      *
      * @throws \Exception
      */
-    public static function between($a, $b, $c)
+    public static function between($a, $min, $max)
     {
-        if (!is_int($a) || !is_int($b) || !is_int($c))
+        if (!is_int($a) || !is_int($min) || !is_int($max))
             throw new \Exception('The three parameters have to be integer.');
 
-        if ($a >= $b && $a <= $c)
+        if($min >= $max)
+            throw new \Exception('You have to enter the minimum and then the maximum.');
+
+        if ($a >= $min && $a <= $max)
             return true;
         else
             return false;
