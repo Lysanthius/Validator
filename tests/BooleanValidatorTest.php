@@ -17,11 +17,9 @@ class BooleanValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testIsTrue()
     {
-        $bool = true;
+        $result = BooleanValidator::isTrue(true);
 
-        $result = BooleanValidator::isTrue($bool);
-
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);;
     }
 
     /**
@@ -31,10 +29,8 @@ class BooleanValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testIsFalse()
     {
-        $bool = false;
+        $result = BooleanValidator::isFalse(false);
 
-        $result = BooleanValidator::isFalse($bool);
-
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 } 

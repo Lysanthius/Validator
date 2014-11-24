@@ -21,7 +21,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = ArrayValidator::isEmpty($array);
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 
     /**
@@ -35,7 +35,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = ArrayValidator::compare($array, 2, ArrayValidator::COMPARE_EQUAL);
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 
     /**
@@ -49,7 +49,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = ArrayValidator::numberElementsBetween($array, 1, 4);
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 
     /**
@@ -63,7 +63,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = ArrayValidator::keyExists($array, 'chocolat');
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 
     /**
@@ -77,6 +77,6 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = ArrayValidator::valueExists($array, 'blanc');
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 } 

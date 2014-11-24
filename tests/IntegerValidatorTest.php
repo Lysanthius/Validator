@@ -21,7 +21,7 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = IntegerValidator::equal($a, $a);
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 
     /**
@@ -36,7 +36,7 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = IntegerValidator::higher($b, $a);
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 
     /**
@@ -51,7 +51,7 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = IntegerValidator::lower($a, $b);
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 
     /**
@@ -67,7 +67,7 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = IntegerValidator::between($b, $a, $c);
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 
     /**
@@ -81,7 +81,7 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = IntegerValidator::negative($a);
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 
     /**
@@ -95,6 +95,6 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = IntegerValidator::positive($a);
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 } 

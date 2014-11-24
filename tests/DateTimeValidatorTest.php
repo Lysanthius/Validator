@@ -19,7 +19,7 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = DateTimeValidator::isMajor($date);
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 
     /**
@@ -33,7 +33,7 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = DateTimeValidator::isYear($date, $date->format('Y'));
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 
     /**
@@ -47,7 +47,7 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = DateTimeValidator::isMonth($date, $date->format('m'));
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 
     /**
@@ -61,6 +61,6 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = DateTimeValidator::isDay($date, $date->format('d'));
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 } 

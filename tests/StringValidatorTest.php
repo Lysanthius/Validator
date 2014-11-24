@@ -52,7 +52,7 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = StringValidator::lengthLower($string, $length);
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 
     /**
@@ -67,7 +67,7 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = StringValidator::lengthBetween($string, $length - 5, $length + 5);
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 
     /**
@@ -81,7 +81,7 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = StringValidator::noWhiteSpace($string);
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 
     /**
@@ -95,6 +95,6 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase
 
         $result = StringValidator::noWhiteSpaceStartEnd($string);
 
-        $this->assertEquals($result, true);
+        $this->assertTrue($result);
     }
 }
