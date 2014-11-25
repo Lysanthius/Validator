@@ -55,9 +55,9 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testIsYearFalse()
     {
-        $date = new \DateTime('2013-02-02');
+        $date = new \DateTime();
 
-        $result = DateTimeValidator::isYear($date, $date->format('Y'));
+        $result = DateTimeValidator::isYear($date, $date->format('m'));
 
         $this->assertFalse($result);
     }
@@ -83,9 +83,9 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testIsMonthFalse()
     {
-        $date = new \DateTime('2014-10-09');
+        $date = new \DateTime();
 
-        $result = DateTimeValidator::isMonth($date, $date->format('m'));
+        $result = DateTimeValidator::isMonth($date, $date->format('Y'));
 
         $this->assertFalse($result);
     }
@@ -111,9 +111,9 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testIsDayFalse()
     {
-        $date = new \DateTime('2014-10-09');
+        $date = new \DateTime();
 
-        $result = DateTimeValidator::isDay($date, $date->format('d'));
+        $result = DateTimeValidator::isDay($date, $date->format('Y'));
 
         $this->assertFalse($result);
     }
