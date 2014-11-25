@@ -37,4 +37,4 @@ class BooleanValidator
 
         return (!$bool) ? true : false;
     }
-} 
+}

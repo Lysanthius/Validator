@@ -34,7 +34,7 @@ class ArrayValidator
      * @param int   $int
      * @param       $comparator
      *
-     * @return bool
+     * @return boolean | null
      *
      * @throws \Exception
      */

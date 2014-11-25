@@ -107,4 +107,4 @@ class StringValidator
 
         return (trim($string) == $string) ? true : false;
     }
-} 
+}

@@ -69,4 +69,4 @@ class DateTimeValidator
 
         return (date_format($dateTime, 'd') === $day) ? true : false;
     }
-} 
+}

@@ -32,7 +32,7 @@ class IntegerValidator
      *
      * @throws \Exception
      */
-    public static function higher ($a, $b)
+    public static function higher($a, $b)
     {
         if (!is_int($a) || !is_int($b))
             throw new \Exception('The two parameters have to be integer.');
@@ -105,4 +105,4 @@ class IntegerValidator
 
         return ($a > 0) ? true : false;
     }
-} 
+}
