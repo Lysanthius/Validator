@@ -21,10 +21,7 @@ class StringValidator
         if(!is_string($string) || !is_int($length))
             throw new \Exception('The first parameter has to be a string, the second an int.');
 
-        if(mb_strlen($string) == $length)
-            return true;
-        else
-            return false;
+        return (mb_strlen($string) == $length) ? true : false;
     }
 
     /**
@@ -40,10 +37,7 @@ class StringValidator
         if(!is_string($string) || !is_int($length))
             throw new \Exception('The first parameter has to be a string, the second an int.');
 
-        if(mb_strlen($string) > $length)
-            return true;
-        else
-            return false;
+        return (mb_strlen($string) > $length) ? true : false;
     }
 
     /**
@@ -59,10 +53,7 @@ class StringValidator
         if(!is_string($string) || !is_int($length))
             throw new \Exception('The first parameter has to be a string, the second an int.');
 
-        if(mb_strlen($string) < $length)
-            return true;
-        else
-            return false;
+        return (mb_strlen($string) < $length) ? true : false;
     }
 
     /**
@@ -84,10 +75,7 @@ class StringValidator
 
         $stringLength = mb_strlen($string);
 
-        if($stringLength >= $min && $stringLength <= $max)
-            return true;
-        else
-            return false;
+        return ($stringLength >= $min && $stringLength <= $max) ? true : false;
     }
 
     /**
@@ -102,10 +90,7 @@ class StringValidator
         if(!is_string($string))
             throw new \Exception('The parameter has to be a string.');
 
-        if (!preg_match('/\s/',$string))
-            return true;
-        else
-            return false;
+        return (!preg_match('/\s/',$string)) ? true : false;
     }
 
     /**
@@ -120,9 +105,6 @@ class StringValidator
         if(!is_string($string))
             throw new \Exception('The parameter has to be a string.');
 
-        if(trim($string) == $string)
-            return true;
-        else
-            return false;
+        return (trim($string) == $string) ? true : false;
     }
 } 

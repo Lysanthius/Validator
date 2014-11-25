@@ -26,10 +26,7 @@ class ArrayValidator
         if(!is_array($array))
             throw new \Exception("The parameter has to be an array.");
 
-        if(empty($array))
-            return true;
-        else
-            return false;
+        return (empty($array)) ? true : false;
     }
 
     /**
@@ -94,10 +91,7 @@ class ArrayValidator
 
         $arrayLength = count($array);
 
-        if($arrayLength >= $min && $arrayLength <= $max)
-            return true;
-        else
-            return false;
+        return ($arrayLength >= $min && $arrayLength <= $max) ? true : false;
     }
 
     /**
@@ -113,10 +107,7 @@ class ArrayValidator
         if(!is_array($array))
             throw new \Exception("The first parameter has to be an array.");
 
-        if(array_key_exists($key, $array))
-            return true;
-        else
-            return false;
+        return (array_key_exists($key, $array)) ? true : false;
     }
 
     /**
@@ -132,9 +123,6 @@ class ArrayValidator
         if(!is_array($array) || !is_string($value))
             throw new \Exception("The first parameter has to be an array, the second a string.");
 
-        if(in_array($value, $array))
-            return true;
-        else
-            return false;
+        return (in_array($value, $array)) ? true : false;
     }
 } 

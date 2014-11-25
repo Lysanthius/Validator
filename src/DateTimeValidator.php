@@ -19,10 +19,7 @@ class DateTimeValidator
 
         $interval = $dateTime->diff($now);
 
-        if($interval->y >= 18)
-            return true;
-        else
-            return false;
+        return ($interval->y >= 18) ? true : false;
     }
 
     /**
@@ -38,10 +35,7 @@ class DateTimeValidator
         if(!is_string($year))
             throw new \Exception('The month parameter has to be a string.');
 
-        if(date_format($dateTime, 'Y') === $year)
-            return true;
-        else
-            return false;
+        return (date_format($dateTime, 'Y') === $year) ? true : false;
     }
 
     /**
@@ -57,10 +51,7 @@ class DateTimeValidator
         if(!is_string($month))
             throw new \Exception('The month parameter has to be a string.');
 
-        if(date_format($dateTime, 'm') === $month)
-            return true;
-        else
-            return false;
+        return (date_format($dateTime, 'm') === $month) ? true : false;
     }
 
     /**
@@ -76,9 +67,6 @@ class DateTimeValidator
         if(!is_string($day))
             throw new \Exception('The day parameter has to be a string.');
 
-        if(date_format($dateTime, 'd') === $day)
-            return true;
-        else
-            return false;
+        return (date_format($dateTime, 'd') === $day) ? true : false;
     }
 } 

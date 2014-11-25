@@ -21,10 +21,7 @@ class IntegerValidator
         if (!is_int($a) || !is_int($b))
             throw new \Exception('The two parameters have to be integer.');
 
-        if ($a == $b)
-            return true;
-        else
-            return false;
+        return ($a == $b) ? true : false;
     }
 
     /**
@@ -40,10 +37,7 @@ class IntegerValidator
         if (!is_int($a) || !is_int($b))
             throw new \Exception('The two parameters have to be integer.');
 
-        if ($a > $b)
-            return true;
-        else
-            return false;
+        return ($a > $b) ? true : false;
     }
 
     /**
@@ -59,10 +53,7 @@ class IntegerValidator
         if (!is_int($a) || !is_int($b))
             throw new \Exception('The two parameters have to be integer.');
 
-        if ($a < $b)
-            return true;
-        else
-            return false;
+        return ($a < $b) ? true : false;
     }
 
     /**
@@ -82,10 +73,7 @@ class IntegerValidator
         if($min >= $max)
             throw new \Exception('You have to enter the minimum and then the maximum.');
 
-        if ($a >= $min && $a <= $max)
-            return true;
-        else
-            return false;
+        return ($a >= $min && $a <= $max) ? true : false;
     }
 
     /**
@@ -100,10 +88,7 @@ class IntegerValidator
         if (!is_int($a))
             throw new \Exception('The parameter have to be an integer.');
 
-        if ($a < 0)
-            return true;
-        else
-            return false;
+        return ($a < 0) ? true : false;
     }
 
     /**
@@ -118,9 +103,6 @@ class IntegerValidator
         if (!is_int($a))
             throw new \Exception('The parameter have to be an integer.');
 
-        if ($a > 0)
-            return true;
-        else
-            return false;
+        return ($a > 0) ? true : false;
     }
 } 

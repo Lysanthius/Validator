@@ -20,10 +20,7 @@ class BooleanValidator
         if (!is_bool($bool))
             throw new \Exception("The parameter have to be a boolean.");
 
-        if($bool)
-            return true;
-        else
-            return false;
+        return ($bool) ? true : false;
     }
 
     /**
@@ -38,9 +35,6 @@ class BooleanValidator
         if (!is_bool($bool))
             throw new \Exception("The parameter is supposed to be a boolean.");
 
-        if(!$bool)
-            return true;
-        else
-            return false;
+        return (!$bool) ? true : false;
     }
 } 
