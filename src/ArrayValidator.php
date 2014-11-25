@@ -31,8 +31,8 @@ class ArrayValidator
 
     /**
      * @param array $array
-     * @param int $int
-     * @param $comparator
+     * @param int   $int
+     * @param       $comparator
      *
      * @return bool
      *
@@ -74,8 +74,8 @@ class ArrayValidator
 
     /**
      * @param array $array
-     * @param int $min
-     * @param int $max
+     * @param int   $min
+     * @param int   $max
      *
      * @return bool
      *
@@ -95,7 +95,7 @@ class ArrayValidator
     }
 
     /**
-     * @param array $array
+     * @param array  $array
      * @param string $key
      *
      * @return bool
@@ -111,7 +111,7 @@ class ArrayValidator
     }
 
     /**
-     * @param array $array
+     * @param array  $array
      * @param string $value
      *
      * @return bool

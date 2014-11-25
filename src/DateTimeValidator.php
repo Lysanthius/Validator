@@ -24,7 +24,7 @@ class DateTimeValidator
 
     /**
      * @param \DateTime $dateTime
-     * @param string $year
+     * @param string    $year
      *
      * @return bool
      *
@@ -40,7 +40,7 @@ class DateTimeValidator
 
     /**
      * @param \DateTime $dateTime
-     * @param string $month
+     * @param string    $month
      *
      * @return bool
      *
@@ -56,7 +56,7 @@ class DateTimeValidator
 
     /**
      * @param \DateTime $dateTime
-     * @param string $day
+     * @param string    $day
      *
      * @return bool
      *

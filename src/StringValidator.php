@@ -10,7 +10,7 @@ class StringValidator
 {
     /**
      * @param string $string
-     * @param int $length
+     * @param int   $length
      *
      * @throws \Exception
      *
@@ -26,7 +26,7 @@ class StringValidator
 
     /**
      * @param string $string
-     * @param int $length
+     * @param int   $length
      *
      * @throws \Exception
      *
@@ -42,7 +42,7 @@ class StringValidator
 
     /**
      * @param string $string
-     * @param int $length
+     * @param int   $length
      *
      * @throws \Exception
      *
@@ -58,8 +58,8 @@ class StringValidator
 
     /**
      * @param string $string
-     * @param int $min
-     * @param int $max
+     * @param int   $min
+     * @param int   $max
      *
      * @throws \Exception
      *
