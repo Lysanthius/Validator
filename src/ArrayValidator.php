@@ -69,9 +69,6 @@ class ArrayValidator
 
             case self::COMPARE_LOWER_OR_EQUAL:
                 return $arrayLength <= $int;
-
-            default:
-                return false;
         }
     }
 
