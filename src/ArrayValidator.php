@@ -34,7 +34,7 @@ class ArrayValidator
      * @param int   $int
      * @param       $comparator
      *
-     * @return boolean | null
+     * @return bool
      *
      * @throws \Exception
      */
@@ -125,4 +125,4 @@ class ArrayValidator
 
         return (in_array($value, $array)) ? true : false;
     }
-} 
+}
